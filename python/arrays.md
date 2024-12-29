@@ -108,5 +108,23 @@ recently asked in Goldman Sachs
 |-----------|----------|----------------|---------------------------------|------------|-----------------|------------------|
 | High Five | LeetCode | Array/dict     | Create dictionary from 2D array | easy       | O(nlogk)        | O(n)             |
 
-Regarding time complexity k is the average number of scores per ID, m is unigueq Ids, n total number of scores. The dominant term depends on  n  and  m :
-	* In most cases,  $m \ll n$ , so  O(n \log k)  dominates.
+Regarding time complexity k is the average number of scores per ID, m is unique Ids, n total number of scores. The dominant term depends on  n  and  m :
+* In most cases,  $m \ll n$ , so  $O(n \log k)$  dominates.
+```python 
+def top_five_average(marks, threshold=5):
+    return sum(marks[:threshold]) // threshold
+
+def high_five(items: List[List[int]]) -> List[List[int]]:
+    performance_dict = {}
+    results=[]
+    for item in items:
+        if item[0] not in performance_dict:
+            performance_dict[item[0]] = [item[1]]
+        else:
+            performance_dict[item[0]].append(item[1])
+    for key in performance_dict:
+        performance_dict[key].sort(reverse=True)
+        results.append([key,top_five_average(performance_dict[key])])
+    results_sorted=sorted(results,key=lambda x:x[0])
+    return results_sorted
+```
