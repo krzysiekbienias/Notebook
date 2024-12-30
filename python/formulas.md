@@ -1,6 +1,6 @@
-# Applying memoaization
-Memoaization is top - down approach 
-Memoaization in leyman terms meaning checking if we didn't solve the subproblem before.
+# Applying memoization
+Memoization is top - down approach 
+Memoization in Layman's terms meaning checking if we didn't solve the subproblem before.
 In practice we need lookup table that is dictionary created inside function like following:
 
 ``` python
