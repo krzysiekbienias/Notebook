@@ -1,6 +1,6 @@
-# Applying memoaization
-Memoaization is top - down approach 
-Memoaization in leyman terms meaning checking if we didn't solve the subproblem before.
+# Applying memoization
+Memoization is top - down approach 
+Memoization in Layman's terms meaning checking if we didn't solve the subproblem before.
 In practice we need lookup table that is dictionary created inside function like following:
 
 ``` python
@@ -22,5 +22,11 @@ $$ways(n)=\left\{\begin{array} {rl} 1 & n=0 \\
 0 & n<0 \\
 \sum_{\substack{jump \in \text{jumps}}}ways(n-jumps)& otherwise \end{array} \right.$$
 
+# Coins change
 
-$$\sum_{\substack{jump \in \text{jumps}}}$$
+!['alt text'](../captures/coin_change.png)
+- greedy algorithms not applicable
+- solution follows the same pattern like ways to climb
+
+!['alt text'](../captures/ways_of_climb_vs_coin_change.png)
+$$coins(amount)=1+\min_{\substack{coin \in possible\ coins, \\ coin\leq amount}}coins(amount - coin)$$

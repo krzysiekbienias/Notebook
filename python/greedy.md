@@ -122,7 +122,7 @@ The key insight is that the problem has a structure where making the locally opt
 * Space complexity $O(1)$
 
 # Best time to buy and sell equity
-### How to classify this challenge?
+## How to classify this challenge?
 
 Summary table:
 
@@ -133,7 +133,7 @@ Summary table:
 | k Transactions         | Dynamic Programming | Overlapping subproblems require combining previous transaction states.    |
 | Cooldown/Fees          | Dynamic Programming | State depends on multiple variables (e.g., cooldown or transaction fees). |
 
-### Variant 1 Single transaction. 
+## Variant 1 Single transaction. 
 ```python
 def best_time_to_buy_and_sell(prices:List[int]):
     if not prices:
@@ -149,5 +149,15 @@ def best_time_to_buy_and_sell(prices:List[int]):
         #update the maximum profit
         max_profit = max(max_profit, profit)
     return max_profit
+```
+
+## Variant 2 Multiple transactions
+##  Assumptions:
+* You can buy nd sell the stock multiple times.
+* You cannot hold more than one stock at time.
+* We want to maximize the total profit.
+### Key insight:
+* Buy low sell hight repeatedly.
+```python
 
 ```

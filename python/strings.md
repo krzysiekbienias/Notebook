@@ -72,3 +72,44 @@ start_char = {str} 'w'
 start_index = {int} 1
 ```
 
+# 389. Find the Difference
+
+| Title               | Source   | Data Structure | Algo Concept | Difficulty | Time Complexity | Space Complexity |
+|---------------------|----------|----------------|--------------|------------|-----------------|------------------|
+| Find the difference | LeetCode | string         | hashing      | easy       | O(n)            | O(1)             |
+## Idea - Hashing
+* Count the occurrences of each character in  word1  and  word2 .
+* Increment the count for each character in  word1.
+* Decrement the count for each character in  word2.
+* The character with a non-zero count after processing both strings is the added character.
+
+
+```python
+def find_difference(word1: str, word2: str) -> str:
+    #this is a difference of characters in words
+    word_dict=dict()
+    for i in range(len(word1)):
+        if word1[i] in word_dict:
+            word_dict[word1[i]] += 1
+        else:
+            word_dict[word1[i]] = 1
+    for i in range(len(word2)):
+        if word2[i] in word_dict:
+            word_dict[word2[i]] -= 1
+        else:
+            word_dict[word2[i]] = 1
+    for key,value in word_dict.items():
+        if value != 0:
+            return key
+```
+
+Function to To get a key from a hash map (dictionary in Python) based on a specific value, you can iterate through the dictionary and check for the value. Here’s how you can do it:
+```python 
+def get_key_by_value(d, target_value):
+    for key, value in d.items():  # Iterate through key-value pairs
+        if value == target_value:
+            return key
+    return None  # Return None if no matching value is found
+
+print(key)  # Output: 'b'
+```

@@ -64,3 +64,24 @@ def all_divisors_with_sqrt(number): #more optimal solution without last divisor.
             return False
 ```
 
+# NIm Game
+In the classic NIM game with  $k = 3$  (you can take 1, 2, or 3 stones), the rule  $n \% 4 \neq 0$  guarantees a win for the first player if both play optimally. This happens because:
+	1.	If  $n \% 4 = 0$ , the second player can always mirror the first player’s moves, ensuring that the last stone is taken by the first player.
+	2.	If  $n \% 4 \neq 0$ , the first player can force the second player into a state where  $n \% 4 = 0$ , ensuring a win.
+
+```python
+def nim_game(n: int) -> bool:
+    # orginal game we may take 1 2 or 3 stones from heap
+    if n%4 != 0:
+        return True
+    else:
+        return False
+```
+## generalization for any $k$
+If the range of stones you can take is extended from 
+$1$ to  $k$ , the general rule becomes:
+
+$n \% (k + 1) \neq 0$
+
+If  $n \% (k + 1) = 0$ , the second player can always force a win.
+
