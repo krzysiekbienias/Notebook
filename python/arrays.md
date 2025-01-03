@@ -129,3 +129,42 @@ def high_five(items: List[List[int]]) -> List[List[int]]:
     return results_sorted
 ```
 
+
+# Smallest difference (AlgoExpert)
+```python
+def smallest_difference(arrayOne, arrayTwo):
+    arrayOne.sort()
+    arrayTwo.sort()
+    i, j = 0, 0
+    min_diff = float('inf')
+    closest_pair = []
+    while i < len(arrayOne) and j < len(arrayTwo):
+        current_diff = abs(arrayOne[i] - arrayTwo[j])
+        if current_diff == 0:
+            return [arrayOne[i], arrayTwo[j]]
+        min_diff = min(min_diff, current_diff)
+        if current_diff <= min_diff:  # update closest pair only if differnece is smaller
+            closest_pair = [arrayOne[i], arrayTwo[j]]
+        if arrayOne[i] < arrayTwo[j]:
+            i += 1
+        else:
+            j += 1
+    return closest_pair
+```
+
+# Non Constructible Change
+```python
+def non_constructible_change(coins):
+    coins.sort()
+    if not coins:
+        return 1
+    current_change = 0
+    for coin in coins:
+        if coin > current_change:
+            return current_change + 1
+        current_change += coin
+    return current_change + 1
+```
+
+
+

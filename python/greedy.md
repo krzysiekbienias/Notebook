@@ -159,5 +159,58 @@ def best_time_to_buy_and_sell(prices:List[int]):
 ### Key insight:
 * Buy low sell hight repeatedly.
 ```python
+put code here
+```
+
+# Minimum loss (Haker Rank)
+GPT could not solve it.
+
+```python
+def minimum_loss(prices):
+    # The dictionary di ensures the relationship between the original array and sorted prices is preserved.
+    di = dict()
+    for i, p in enumerate(prices):
+        di[p] = i  # here the value is index and the key assumption in this challenge is that all prices are unique.
+    prices.sort()
+    min_loss = float('inf')
+    for i in range(1, len(prices)):
+        # Reject invalid order. invalid = selle before buy
+        if di[prices[i - 1]] > di[prices[i]]:  # here we compare indexes
+            min_loss = min(min_loss, prices[i] - prices[i - 1])
+    return min_loss
 
 ```
+
+# Subarray Sort (AlgoExpert)
+## Algorithm
+1. Check if the array is already sorted. if it is return ```[-1,-1]```
+2. Find the firs out of order element from left
+3. Find the firs out of order element from right
+4. Expand the boundaries: If there are any out of order elements within the identified subarray, adjust boundaries accordingly to ensure the entire subarray is counted.
+```python
+def subarray_sort(array):
+    if sorted(array) == array:
+        return [-1, -1]
+    n = len(array)
+    l = 0
+    r = n - 1
+    # 1. looking for index from left where order is broken
+    while l < n and array[l] <= array[l + 1]:
+        l += 1
+    # 2. looking for index from right where order is broken.
+    # Note that r is bounded from zero because we are going from
+    while r >0 and array[r] >= array[r - 1]:
+        r -= 1
+    # 3. find min and max in the unsorted subarray
+    subarray_min=min(array[l:r+1])
+    subarray_max=max(array[l:r+1])
+    # 4. Expand the right boundary if needed pointers go to opposite direction
+    while l>0 and array[l-1]>subarray_min:
+        l -= 1
+    while r<n-1 and array[r+1]<subarray_max:
+        r += 1
+    return [l,r]
+
+```
+
+

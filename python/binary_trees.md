@@ -90,3 +90,26 @@ Of course h is hight of the tree.
          return 0
      return depth+node_depths(root.left,depth+1)+node_depths(root.right,depth+1)
 ```
+
+## Evaluate Expression Tree
+| Title                    | Source     | Data Structure | Algo Concept | Difficulty | Time Complexity | Space Complexity |
+|--------------------------|------------|----------------|--------------|------------|-----------------|------------------|
+| Evaluate Expression Tree | AlgoExpert | Binary Tree    | recursion    | easy       | O(n)            | O(h)             |
+
+```python
+ def evaluate_expression_tree(tree: BinaryTree) -> int:
+     if not tree:
+         return 0
+     if not tree.left and not tree.right:
+         return tree.value
+     left_value = evaluate_expression_tree(tree.left)
+     right_value = evaluate_expression_tree(tree.right)
+     if tree.value==-1:
+         return left_value + right_value
+     if tree.value==-2:
+         return left_value - right_value
+     if tree.value==-4:
+         return left_value * right_value
+     if tree.value==-3:
+         return math.floor(left_value / right_value)
+```
