@@ -4,20 +4,34 @@ For each chalange we need to cover following:
 * source
 * algo concept
 * comments
-
-| Id | Title                                         | Source     | Data Structure | Algo Concept                    | Difficulty | Time Complexity | Space Complexity |
-|----|-----------------------------------------------|------------|----------------|---------------------------------|------------|-----------------|------------------|
-| 1  | Two number sum                                | AlgoExpert | array          | Two pointers                    | easy       |                 |                  |
-| 2  | Tournament Winner                             | AlgoExpert | dictionary     |                                 | easy       |                 |                  |
-| 3  | Transpose Matrix                              | AlgoExpert | 2D array       | Traverse 2D matrix              | Easy       |                 |                  |
-| 4  | Move Element To End                           | AlgoExpert | array          | Two pointers                    | easy       |                 |                  |
-| 5  | First Duplicate Value                         | AlgoExpert | array          | hash set                        | easy       | O(n)            | O(n)             |
-| 6  | Palindrome check                              | AlgoExpert | string         | Two pointers                    | easy       | O(n)            | O(1)             |
-| 7  | House Robber                                  | LeetCode   | array          | Dynamic programming /recursion  | Medium     |                 |                  |
-| 8  | Containers With Most Water.                   | LeetCode   | aaray          | Two pointers, greedy            | Medium     |                 |                  |
-| 9  | Longest Substring Without Repeating Character | LeetCode   | String         | Sliding Window                  | Medium     | O(n)            | O(min(m,n))      |
-| 10 | Perfect Number                                | LeetCode   | Math           | Math                            | easy       | ?               | ?                |
-| 11 | High Five                                     | LeetCode   | Array/dict     | Create dictionary from 2D array | easy       | O(nlogk)        | O(n)             |
+* 
+## Inventory  
+| Id | Title                                         | Source                | Data Structure | Algo Concept                    | Difficulty | Time Complexity                                | Space Complexity |
+|----|-----------------------------------------------|-----------------------|----------------|---------------------------------|------------|------------------------------------------------|------------------|
+| 1  | Two number sum                                | AlgoExpert            | array          | Two pointers                    | easy       |                                                |                  |
+| 2  | Tournament Winner                             | AlgoExpert            | dictionary     |                                 | easy       |                                                |                  |
+| 3  | Transpose Matrix                              | AlgoExpert            | 2D array       | Traverse 2D matrix              | Easy       |                                                |                  |
+| 4  | Move Element To End                           | AlgoExpert            | array          | Two pointers                    | easy       |                                                |                  |
+| 5  | First Duplicate Value                         | AlgoExpert            | array          | hash set                        | easy       | O(n)                                           | O(n)             |
+| 6  | Palindrome check                              | AlgoExpert            | string         | Two pointers                    | easy       | O(n)                                           | O(1)             |
+| 7  | House Robber                                  | LeetCode              | array          | Dynamic programming /recursion  | Medium     |                                                |                  |
+| 8  | Containers With Most Water.                   | LeetCode              | aaray          | Two pointers, greedy            | Medium     |                                                |                  |
+| 9  | Longest Substring Without Repeating Character | LeetCode              | String         | Sliding Window                  | Medium     | O(n)                                           | O(min(m,n))      |
+| 10 | Perfect Number                                | LeetCode              | Math           | Math                            | easy       | ?                                              | ?                |
+| 11 | High Five                                     | LeetCode              | Array/dict     | Create dictionary from 2D array | easy       | O(nlogk)                                       | O(n)             |
+| 12 | Kth Largest element in an Array               | LeetCode              | array/heap     | Divide and counter heap         | medium     | O(log n) -> heap or<br/>O(nlogn)->with sorting |                  |
+| 13 | Find Three Largest Numbers                    | AlgoExpert            | Heap/searching |                                 | easy       |                                                |                  |
+| 14 | Class Photos                                  | AlgoExpert            | array          | greedy                          | easy       | O(n log n)                                     |                  |
+| 15 | Kathane’s Algorithm                           | AlgoExpert            | array          | dynamic programming             | easy       | O(n)                                           | O(1)             |
+| 16 | Find the difference                           | LeetCode              | string         | hashing                         | easy       | O(n)                                           | O(1)             |
+| 17 | Binary tree traversing                        | My studies traversing | Binary Tree    | Preorder,inorder,postorder,bfs  | easy       | O(log n)                                       | O(1)             |
+| 18 | Branch Sums                                   | AlgoExpert            | Binary Tree    | recursion                       | easy       | O(n)                                           | (O(n)            |
+| 19 | Node Depths                                   | AlgoExpert            | Binary Tree    | Recursion                       | easy       | O(n)                                           | O(h)             |
+| 20 | Evaluate Expression Tree                      | AlgoExpert            | Binary Tree    | recursion                       | easy       | O(n)                                           | O(h)             |
+| 21 | MInimum Loss                                  | Haker Rank            | array          | greedy                          | medium     | O(n log n) sort price                          | O(n) dictionary  |
+| 22 | Subarray Sort                                 | AlgoExpert            | array          | Two pointers                    | medium     | O(n)                                           | O(1)             |
+| 23 | Smallest Difference                           | AlgoExpert            | array          | Two pointers                    | medium     | O(n)                                           | O(1)             |
+| 24 | Missing Numbers                               | AlgoExpert            | aaray          | hash set                        | medium     | O(n)                                           | O(n)             |
 
 
 | Technique                 | Popular Challenges                                                                                                                                                                                                                                                                                                                  |
