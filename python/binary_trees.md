@@ -113,3 +113,36 @@ Of course h is hight of the tree.
      if tree.value==-3:
          return math.floor(left_value / right_value)
 ```
+
+## Symmetrical Tree
+### Key points
+* we need two functions.
+*  Heart of solution is function is_symetric
+for to check tree won't be symetric of one childres is None and the second is not None
+```python
+    if not bt1 or not bt2:
+        return False
+```
+### Algorithm 
+The function works by recursively comparing the left and right subtrees of the root to check if they are mirror images of each other. This involves:
+1.	Ensuring the root’s left and right children are either both None or have equal values.
+2.	Recursively checking:
+	*	The left child of the left subtree against the right child of the right subtree.
+	*	The right child of the left subtree against the left child of the right subtree.
+
+```python
+def is_mirror(bt1,bt2):
+    #both nodes are None
+    if not bt1 and not bt2:
+        return True
+    # if one node is None the tree cannot be symmetrical
+    if not bt1 or not bt2:
+        return False
+    return (bt1.value==bt2.value and is_mirror(bt1.left,bt2.right) #outer children
+            and is_mirror(bt1.right,bt2.left)) #inner children
+
+def symmetrical_tree(tree):
+    if not tree:
+        return True
+    return is_mirror(tree.left,tree.right)
+```
