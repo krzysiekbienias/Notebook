@@ -9,7 +9,6 @@
 *  $\tau=T-t$ time to maturity 
 
 Define
-
 $$
 d_{1}:=\frac{\log\frac{S_{t}}{K}+(r+\frac{1}{2}\sigma^{2})\tau}{\sigma\sqrt{\tau}}
 $$
