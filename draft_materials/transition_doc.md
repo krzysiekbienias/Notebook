@@ -38,3 +38,5 @@ The reconciliation algorithm aims to ensure data consistency and accuracy betwee
    - Finally, compare key risk metrics between the corresponding trades from Kronos and Orca. This includes assessing values such as exposure, volatility, and other relevant risk indicators to ensure consistency and accuracy across both datasets.
 
 # T-Copula method
+## Orca poplation 
+The issue is that in STAGING.TRADE_INFO we don’t have populated security_id apart from 3 Bond trades. Because of that we need to again extract them from TWP data base, like we did for Kronos.
