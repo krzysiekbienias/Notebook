@@ -39,4 +39,4 @@ The reconciliation algorithm aims to ensure data consistency and accuracy betwee
 
 # T-Copula method
 ## Orca poplation 
-The issue is that in STAGING.TRADE_INFO we don’t have populated security_id apart from 3 Bond trades. Because of that we need to again extract them from TWP data base, like we did for Kronos.
+The issue is that in STAGING.TRADE_INFO, the security_id field is not populated, except for three bond trades. As a result, we need to extract the data again from the TWP database, similar to the approach used for Kronos.
