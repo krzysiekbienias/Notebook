@@ -74,3 +74,9 @@ class InterpolationHandler:
             else:
                 return float(interp_object(self.tenor_2_years(tenor_node)))
 ```
+
+## FX RATES
+```python
+# Exchange rates dictionary
+fx_rates = {'EURGBP': 0.8381, 'EURNOK': 11.7625, 'EURSEK': 10.9253, 'EURUSD': 1.08264}
+```
